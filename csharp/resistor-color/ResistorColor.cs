@@ -4,42 +4,41 @@ public static class ResistorColor
 {
     public static int ColorCode(string color)
     {
-        int aux = 0;
+        int code = 0;
         switch (color)
         {
             case "black":
-                aux = 0;
+                code = 0;
                 break;
             case "brown":
-                aux = 1;
+                code = 1;
                 break;
             case "red":
-                aux = 2;
+                code = 2;
                 break;
             case "orange":
-                aux = 3;
+                code = 3;
                 break;
             case "yellow":
-                aux = 4;
+                code = 4;
                 break;
             case "green":
-                aux = 5;
+                code = 5;
                 break;
             case "blue":
-                aux = 6;
+                code = 6;
                 break;
             case "violet":
-                aux = 7;
+                code = 7;
                 break;
             case "gray":
-                aux = 8;
+                code = 8;
                 break;
             case "white":
-                aux = 9;
+                code = 9;
                 break;
         }
-        return aux;
-        //return code;
+        return code;
     }
     public static string[] Colors()
     {
