@@ -2,8 +2,8 @@ using System;
 
 public class SpaceAge
 {
-    int Seconds;
-    double earthSeconds = 31557600.00;
+    private int Seconds;
+    private double earthSeconds = 31557600.00;
     public SpaceAge(int seconds)
     {
         Seconds = seconds;
