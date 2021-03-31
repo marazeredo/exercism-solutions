@@ -27,12 +27,6 @@ public class HighScores
 
     public List<int> PersonalTopThree()
     {
-        List<int> topthree;
-        List<int> aux;
-        aux = _list;
-        topthree(0,0) = aux.Max();
-
-      // List<int>[] TopThree = [_list.Max(),0,0];
-       // return 
+       return _list.OrderByDescending(????????);
     }
 }
