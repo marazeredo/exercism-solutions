@@ -2,59 +2,42 @@ using System;
 
 public class SpaceAge
 {
-    private int Seconds;
+    private int _seconds;
     private double earthSeconds = 31557600.00;
-    
-    public SpaceAge(int seconds)
+    private struct OrbitalPeriodInEarthYears
     {
-        Seconds = seconds;
+        public const double Mercury = 0.2408467d;
+        public const double Venus = 0.61519726d;
+        public const double Mars = 1.8808158d;
+        public const double Jupiter = 11.862615d;
+        public const double Saturn = 29.447498d;
+        public const double Uranus = 84.016846d;
+        public const double Neptune = 164.79132d;
     }
 
-    public double OnEarth()
-    {
-        double earthAge = Seconds / earthSeconds;
-        return earthAge;
-    }
+    public SpaceAge(int seconds) => _seconds = seconds;
 
-    public double OnMercury()
-    {
-        double mercuryAge = (Seconds / earthSeconds) / 0.2408467;
-        return mercuryAge;
-    }
+    public double OnEarth() =>
+        _seconds / earthSeconds;
 
-    public double OnVenus()
-    {
-        double venusAge = (Seconds / earthSeconds) / 0.61519726;
-        return venusAge;
-    }
+    public double OnMercury() =>
+        OnEarth() / OrbitalPeriodInEarthYears.Mercury;
 
-    public double OnMars()
-    {
-        double marsAge = (Seconds / earthSeconds) / 1.8808158;
-        return marsAge;
-    }
+    public double OnVenus() =>
+        OnEarth() / OrbitalPeriodInEarthYears.Venus;
 
-    public double OnJupiter()
-    {
-        double jupterAge = (Seconds / earthSeconds) / 11.862615;
-        return jupterAge;
-    }
+    public double OnMars() =>
+        OnEarth() / OrbitalPeriodInEarthYears.Mars;
 
-    public double OnSaturn()
-    {
-        double saturnoAge = (Seconds / earthSeconds) / 29.447498;
-        return saturnoAge;
-    }
+    public double OnJupiter() =>
+        OnEarth() / OrbitalPeriodInEarthYears.Jupiter;
 
-    public double OnUranus()
-    {
-        double uranusAge = (Seconds / earthSeconds) / 84.016846;
-        return uranusAge;
-    }
+    public double OnSaturn() =>
+        OnEarth() / OrbitalPeriodInEarthYears.Saturn;
 
-    public double OnNeptune()
-    {
-        double neptuneAge = (Seconds / earthSeconds) / 164.79132;
-        return neptuneAge;
-    }
+    public double OnUranus() =>
+        OnEarth() / OrbitalPeriodInEarthYears.Uranus;
+
+    public double OnNeptune() =>
+        OnEarth() / OrbitalPeriodInEarthYears.Neptune;
 }
