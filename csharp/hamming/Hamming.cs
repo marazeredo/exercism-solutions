@@ -5,14 +5,11 @@ public static class Hamming
     public static int Distance(string firstStrand, string secondStrand)
     {
         int hammingDistance = 0;
-        char[] fS = firstStrand.ToCharArray();
-        char[] sS = secondStrand.ToCharArray();
-
         if (firstStrand.Length == secondStrand.Length)
         {
-            for (int ctr = 0; ctr < fS.Length; ctr++)
+            for (int i = 0; i < firstStrand.Length; i++)
             {
-                if (fS[ctr] != sS[ctr])
+                if (firstStrand[i] != secondStrand[i])
                 {
                     hammingDistance++;
                 }
