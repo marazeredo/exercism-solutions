@@ -7,10 +7,7 @@ public static class TwoFer
     public static string Speak(String name = "you")
     {
         //throw new NotImplementedException("You need to implement this function.");
-        if (name is null)
-        {
-            name = "you";
-        }
+        name ??= "you";
 
         return ("One for " + name + ", one for me.");
     }
