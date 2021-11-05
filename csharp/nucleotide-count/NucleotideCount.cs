@@ -45,25 +45,16 @@ public static class NucleotideCount
                     }
 
                 default:
-                    invalid = true;
+                   throw new ArgumentException();
                     break;
-            }
+            }  
         }
 
         DNA.Add('A', count_A);
         DNA.Add('C', count_C);
         DNA.Add('G', count_G);
         DNA.Add('T', count_T);
-        //DNA.Add('I', count_invalid);
 
-        if (!invalid)
-        {
-            return DNA;
-        }
-        else
-        {
-           // return ;
-        }
-        
+        return DNA;    
     }
 }
